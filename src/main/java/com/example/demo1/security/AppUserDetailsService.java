@@ -1,10 +1,10 @@
 package com.example.demo1.security;
 
 //import lombok.extern.java.Log;
-//import org.perscholas.dao.IStudentRepo;
-//import org.perscholas.enums.Role;
-//import org.perscholas.models.Student;
-//import org.perscholas.services.StudentService;
+//import  com.example.demo1.dao.UserRepository;
+//import  com.example.demo1.enums.Role;
+//import  com.example.demo1.models.User;
+//import  com.example.demo1.services.UserService;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.core.userdetails.UserDetails;
 //import org.springframework.security.core.userdetails.UserDetailsService;

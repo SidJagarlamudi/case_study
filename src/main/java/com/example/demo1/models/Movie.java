@@ -15,14 +15,17 @@ public class Movie {
     private long id;
 
     @Column(name = "title")
+    //@NotNull
 //    @Size(min= 3, max= 50, message= "Must be between 3 and 50 characters")
     private String title;
 
     @Column(name = "producer")
+    //@NotNull
 //    @NotBlank(message = "Enter something")
     private String producer;
 
     @Column(name = "description")
+    //@NotNull
 //    @Size(min= 50, max= 500, message= "Must be between 50 and 500 characters")
     private String description;
 

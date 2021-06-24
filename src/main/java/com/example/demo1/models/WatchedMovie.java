@@ -22,6 +22,7 @@ public class WatchedMovie {
     private Integer userId;
 
     @Column(name = "watched")
+    //@NotNull
     //@NotBlank(message = "Selection is mandatory")
     private Boolean watched;
 

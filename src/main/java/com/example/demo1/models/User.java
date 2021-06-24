@@ -22,19 +22,25 @@ public class User {
     private long id;
 
     @Column(name = "first_Name")
+    //@NotNull
     private String firstName;
 
     @Column(name = "last_Name")
+    //@NotNull
     private String lastName;
 
     @Column(name = "email")
+    //@Email(regexp = "\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b",message = "Invalid email address")
     // @NotBlank(message = "Email is mandatory")
     private String email;
 
     @Column(name = "password")
+    //@NotNull
+    //@Pattern(regexp = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$", message = "- at least 8 characters\n- must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number\n- Can contain special characters")
     private String password;
 
     @Column(name = "age")
+    //@NotNull
     private Integer age;
 
     @ManyToMany

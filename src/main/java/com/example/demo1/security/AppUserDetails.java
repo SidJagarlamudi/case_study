@@ -1,7 +1,7 @@
 package com.example.demo1.security;
 
-//import org.perscholas.models.Student;
-//import org.perscholas.services.StudentService;
+//import com.example.demo1.models.User;
+//import  com.example.demo1.services.UserService;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.core.GrantedAuthority;
 //import org.springframework.security.core.authority.SimpleGrantedAuthority;
