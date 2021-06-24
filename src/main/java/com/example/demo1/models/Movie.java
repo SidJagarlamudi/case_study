@@ -1,10 +1,10 @@
 package com.example.demo1.models;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.ToString;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
 //import javax.validation.constraints.*;
 @Entity
 @Table(name = "Movies")
@@ -28,7 +28,12 @@ public class Movie {
     //@NotNull
 //    @Size(min= 50, max= 500, message= "Must be between 50 and 500 characters")
     private String description;
-
+    @ManyToMany
+    @JoinTable(name= "User",
+            joinColumns = @JoinColumn(name = "id"),
+            inverseJoinColumns = @JoinColumn(name = "cId"))
+    @ToString.Exclude
+    List<Review> Review = new ArrayList<>();
 
     public Movie() {
 

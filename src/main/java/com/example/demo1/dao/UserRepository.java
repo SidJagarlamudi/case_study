@@ -7,4 +7,5 @@ import com.example.demo1.models.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
 
+    User findById(Integer Id);
 }

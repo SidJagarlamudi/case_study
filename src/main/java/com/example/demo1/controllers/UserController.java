@@ -3,7 +3,6 @@
 //import java.util.HashMap;
 //import java.util.List;
 //import java.util.Map;
-//
 //import lombok.extern.java.Log;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.context.annotation.ComponentScan;
@@ -18,64 +17,28 @@
 //
 //@Controller
 //@Log
-//@RequestMapping("student")
+//@RequestMapping("user")
 //public class UserController {
 //
 //    @Autowired
-//    StudentService sService;
+//    UserService userService;
 //
 //    @Autowired
-//    CourseService courseService;
+//    MovieService movieService;
 //
-//    @ModelAttribute("student")
-//    public Student initStudent(){
-//        return new Student();
+//    @ModelAttribute("user")
+//    public User initUser(){
+//        return new User();
 //    }
 //
-//    @ModelAttribute("course")
-//    public Course initCourse(){
-//        return new Course();
+//    @ModelAttribute("movie")
+//    public Movie initMovie(){
+//        return new Movie();
 //    }
 //
 //    @GetMapping("/register")
 //    public String registerPage() {
 //        return "register"; }
-//
-//    @PostMapping("/register")
-//    public String registerNewUser(@ModelAttribute("User") @Valid User user, BindingResult result, Model model) {
-//
-//        if (result.hasErrors()) {
-//            log.warning("Invalid input");
-//            return "register";
-//        }
-//
-//        model.addAttribute("user", user);
-//        sService.saveUser(user);
-//        return "redirect:../student/registertocourse/"+student.getSId();
-//    }
-//
-//
-//    @GetMapping("/registertocourse/{id}")
-//    public String coursePage(@PathVariable("id") Long id, Model model) {
-//        Student student = sService.getStudentById(id);
-//        // Student student = (Student) model.getAttribute("student");
-//
-//        List<Course> courseList = courseService.getAllCourses();
-//        model.addAttribute("student", student);
-//        model.addAttribute("courses", courseList);
-//        return "course";
-//    }
-//
-//    @PostMapping("/progress")
-//    public String registerStudentToCourse(@RequestParam("sId") Long id,
-//                                          @RequestParam("sCourses") List<Course> courses,
-//                                          Model model) {
-//
-//        Student student = sService.getStudentById(id);
-//        student.getSCourses().forEach(courses::add);
-//        student.setSCourses(courses);
-//        sService.saveStudent(student);
-//        return "confirm";
 //
 //    }
 //}

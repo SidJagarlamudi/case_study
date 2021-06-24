@@ -43,10 +43,11 @@ public class User {
     //@NotNull
     private Integer age;
 
-    @ManyToMany
+    @OneToMany
     @JoinTable(name= "Review",
             joinColumns = @JoinColumn(name = "id"),
-            inverseJoinColumns = @JoinColumn(name = "cId"))
+            inverseJoinColumns = @JoinColumn(name = "rId"))
+
     @ToString.Exclude
     List<Review> Review = new ArrayList<>();
     public User() {
